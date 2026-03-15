@@ -1,0 +1,24 @@
+# Various OS level directories we don't care about committing.
+.bundle/
+.cache/
+.config/
+.local/
+.copilot/
+.dotnet/
+.nix-*
+.vscode-server/
+.vscode-remote-containers/dist/
+tmp/
+
+# Various OS level files we don't care about committing.
+.bash_history
+.bash_logout
+.gitconfig
+.irb_history
+.profile
+.python_history
+.sudo_as_admin_successful
+.wget-hsts
+
+# Do not commit projects here
+projects/*/

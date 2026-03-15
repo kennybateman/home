@@ -1,0 +1,44 @@
+Operation System setup instructions...
+1. Download and Run Debian from Microsoft Store on Windows OS
+2. using apt install... curl, xz-utils, git, direnv, and wget
+3. install nix via curl
+
+First time VSCode setup...
+1. Open it from Windows
+2. Set Debian to be default terminal
+3. Navigate to project directory on WSL
+4. Run ```code -r .``` in the home directory, and you will be prompted to install VSCode Server via wget
+
+Maintaining dependencies...
+1. Be aware of all apt package versions that were installed
+2. Be aware of all other packages installed outside of apt
+  * code-server via wget
+  * nix via curl
+3. Be aware of all nix packages
+
+Git setup...
+Don't know if I want to have individual repos per project, or one large project repo.
+
+Setup remote on Windows...
+1. navigate to Desktop/home/remotes
+2. git init --bare <project-type>/<project-name>.git
+Setup working directory on WSL...
+3. go to the working directory on WSL
+4. git init
+5. git remote add winrepo /mnt/c/Users/kenru/Desktop/home/remotes/<project-type>/<project-name>.git
+6. save and commit and push progress
+Setup a working directory on Windows...
+7. clone a working copy into a similar windows directory: /Desktop/home/projects/<project-type>/<project-name>.git
+
+Workflow...
+1. Open VSCode from Windows
+2. View entire WSL home from code note: find way to toggle hidden files/folders
+3. Find and work on project!
+
+Ruby with Nix...
+1. Use the nix built versions of ruby from nixpkgs-ruby
+2. Use bundix to read Gemfile.lock and generate gemset.nix
+
+Installing Gems...
+1. gem install gem-name
+2. bundle install
