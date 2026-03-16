@@ -23,3 +23,7 @@ tmp/
 # Do not commit projects here
 projects/*/
 remotes/*/
+
+# Do not commit obsidian notes, which I want to keep in the windows copy of home
+.obsidian/
+images_for_obsidian/

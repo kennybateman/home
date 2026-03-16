@@ -1,44 +1,48 @@
-Operation System setup instructions...
-1. Download and Run Debian from Microsoft Store on Windows OS
-2. using apt install... curl, xz-utils, git, direnv, and wget
-3. install nix via curl
+Welcome to my development environment home!
 
-First time VSCode setup...
+The plan here is to... 
+Use a Debian OS (WSL) on a Windows machine.
+Use Nix package manager to manage most software.
+Use Git to version control work and synchronize it between Windows and WSL.
+
+Debian OS setup instructions
+1. Download and Run Debian from Microsoft Store on Windows OS, WSL will just run it.
+2. Using apt install curl, xz-utils, git, direnv, and wget
+3. install nix via curl (find cmd for latest version here https://nixos.org/download/)
+
+First time VSCode setup
 1. Open it from Windows
 2. Set Debian to be default terminal
-3. Navigate to project directory on WSL
-4. Run ```code -r .``` in the home directory, and you will be prompted to install VSCode Server via wget
+3. Run ```code -r .``` in a WSL directory, you will be prompted to install VSCode Server via wget
 
-Maintaining dependencies...
-1. Be aware of all apt package versions that were installed
-2. Be aware of all other packages installed outside of apt
+Maintaining dependencies
+1. Using a script, dump all current apt package versions to apt.txt
+2. Using a script, dump verions of software installed outside of apt to programs.txt
   * code-server via wget
   * nix via curl
-3. Be aware of all nix packages
+3. Using a shellHook, dump versions of all nix managed software to nix.txt
 
-Git setup...
-Don't know if I want to have individual repos per project, or one large project repo.
+Git
+1. On WSL make the home (username) directory a repo. Host this on github so I can get it anywhere.
+2. Make individual projects repos, and host their remotes on Windows. 
+3. Make local windows copies of the branches, not just remotes.
+4. On Windows, use Obsidian in the home directory, so that I can build notes about my apps.
 
-Setup remote on Windows...
-1. navigate to Desktop/home/remotes
-2. git init --bare <project-type>/<project-name>.git
-Setup working directory on WSL...
-3. go to the working directory on WSL
-4. git init
-5. git remote add winrepo /mnt/c/Users/kenru/Desktop/home/remotes/<project-type>/<project-name>.git
-6. save and commit and push progress
-Setup a working directory on Windows...
-7. clone a working copy into a similar windows directory: /Desktop/home/projects/<project-type>/<project-name>.git
+  Windows
+    User/me/Desktop/home
+      remotes/
+      projects/
+      obsidian notes
 
-Workflow...
-1. Open VSCode from Windows
-2. View entire WSL home from code note: find way to toggle hidden files/folders
-3. Find and work on project!
-
-Ruby with Nix...
-1. Use the nix built versions of ruby from nixpkgs-ruby
-2. Use bundix to read Gemfile.lock and generate gemset.nix
-
-Installing Gems...
-1. gem install gem-name
-2. bundle install
+  WSL
+    /home/me
+      projects/
+        .setup_remote.sh
+        .push_and_update.sh
+      README
+      apt.txt
+      programs.txt
+      nix.txt
+      .welcome.sh
+      .bashrc
+      .envrc
