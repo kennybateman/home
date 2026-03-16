@@ -22,3 +22,4 @@ tmp/
 
 # Do not commit projects here
 projects/*/
+remotes/*/
