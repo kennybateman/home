@@ -1,4 +1,4 @@
-ruby 3.2.2
+ruby 3.4.8
 bundix 2.5.2
 nodejs 24.13.0
 sqlite 3.51.2
