@@ -34,12 +34,8 @@ in
       inherit packages;
 
       shellHook = ''
-        # bundix fails when it tries to write to /tmp, changing it to $HOME/tmp works fine
-        export TMPDIR=$HOME/tmp
-        mkdir -p $TMPDIR
-
         # Print out the packages in the nix shell to a file for easy reference
-        rm nix.txt
+        rm nix.txt # delete old file
         ${builtins.concatStringsSep "\n"
           (map (p: "echo ${p.pname or p.name} ${p.version or ""} >> ~/nix.txt" ) packages)}
 
