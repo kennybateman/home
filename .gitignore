@@ -10,6 +10,11 @@
 .vscode-remote-containers/dist/
 tmp/
 
+# Nixapps directory setup
+nixapps/*
+!nixapps/default.nix
+!install.sh
+
 # Various OS level files we don't care about committing.
 .bash_history
 .bash_logout

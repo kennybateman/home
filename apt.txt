@@ -1,6 +1,5 @@
 Manually installed apt packages:
 curl 8.14.1-2+deb13u2
-direnv 2.32.1-2+b16
 git 1:2.47.3-0+deb13u1
 wget 1.25.0-2
 xz-utils 5.8.1-1
@@ -32,7 +31,6 @@ debian-archive-keyring 2025.1
 debianutils 5.23.2
 dhcpcd-base 1:10.1.0-11+deb13u1
 diffutils 1:3.10-4
-direnv 2.32.1-2+b16
 dmidecode 3.6-2
 dpkg 1.22.21
 e2fsprogs 1.47.2-3+b3
@@ -259,3 +257,4 @@ Install: libperl5.40:amd64 (5.40.1-6, automatic)
 	libxdmcp6:amd64 (1:1.1.5-1, automatic)
 Install: wget:amd64 (1.25.0-2)
 Install: direnv:amd64 (2.32.1-2+b16)
+Remove: direnv:amd64 (2.32.1-2+b16)

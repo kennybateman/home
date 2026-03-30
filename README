@@ -7,7 +7,7 @@ Use Git to version control work and synchronize it between Windows and WSL.
 
 Debian OS setup instructions
 1. Download and Run Debian from Microsoft Store on Windows OS, WSL will just run it.
-2. Using apt install curl, xz-utils, git, direnv, and wget
+2. Using apt install curl, xz-utils, git, and wget
 3. install nix via curl (find cmd for latest version here https://nixos.org/download/)
 
 First time VSCode setup
@@ -16,33 +16,40 @@ First time VSCode setup
 3. Run ```code -r .``` in a WSL directory, you will be prompted to install VSCode Server via wget
 
 Maintaining dependencies
-1. Using a script, dump all current apt package versions to apt.txt
-2. Using a script, dump verions of software installed outside of apt to programs.txt
-  * code-server via wget
-  * nix via curl
-3. Using a shellHook, dump versions of all nix managed software to nix.txt
+1. Use scripts to dump all version information from each app into nice text files
+2. apt.txt, curl.txt, winget.txt, nix.txt, etc...
+3. anything contained to a nix shell, output the versions to a file called nix.txt local to that directory
 
 Git
 1. On WSL make the home (username) directory a repo. Host this on github so I can get it anywhere.
 2. Make individual projects repos, and host their remotes on Windows. 
-3. Make local windows copies of the branches, not just remotes.
+3. Make local windows copies of the branches, not just remotes, so I can see source.
 4. On Windows, use Obsidian in the home directory, so that I can build notes about my apps.
 
   Windows
     User/me/Desktop/home
       remotes/
       projects/
-      obsidian notes
+      obsidian-vault
 
   WSL
     /home/me
-      projects/
-        .setup_remote.sh
-        .push_and_update.sh
-      README
-      apt.txt
-      programs.txt
-      nix.txt
-      .welcome.sh
       .bashrc
-      .envrc
+      nixpkgs.nix
+
+      README.md
+      apt.txt
+      curl.txt
+      wget.txt
+      nix.txt
+
+      projects/
+        setup_remote.sh
+        push_and_update.sh
+        nix.txt
+        shell.nix
+        .envrc
+      
+      nixapps/
+        default.nix
+        install.sh

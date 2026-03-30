@@ -14,7 +14,7 @@ fi
 
 
 PROJECT_DIR="$(basename "$(dirname "$PWD")")/$(basename "$PWD")"
-WIN_WORKING_DIR="$WINHOME_DIR/projects/$PROJECT_DIR"
+WIN_WORKING_DIR="$WINHOME/projects/$PROJECT_DIR"
 
 git push
 git -C "$WIN_WORKING_DIR" pull

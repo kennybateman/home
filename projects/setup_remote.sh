@@ -13,8 +13,8 @@ if ! git diff-index --quiet HEAD --; then
 fi
 
 PROJECT_DIR="$(basename "$(dirname "$PWD")")/$(basename "$PWD")"
-REMOTE_DIR="$WINHOME_DIR/remotes/$PROJECT_DIR"
-WIN_WORKING_DIR="$WINHOME_DIR/projects/$PROJECT_DIR"
+REMOTE_DIR="$WINHOME/remotes/$PROJECT_DIR"
+WIN_WORKING_DIR="$WINHOME/projects/$PROJECT_DIR"
 WORKING_DIR="$HOME/projects/$PROJECT_DIR"
 
 # setup remote repo on windows...
