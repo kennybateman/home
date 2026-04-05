@@ -24,6 +24,8 @@ nixapps/*
 .python_history
 .sudo_as_admin_successful
 .wget-hsts
+.npm/
+.yarnrc
 
 # Do not commit projects here
 projects/*/

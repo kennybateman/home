@@ -2,7 +2,7 @@
 # Installs each package in nix store.
 # Creates custom derivation in nix store.
 # Derivation in store has symlinks to packages in store.
-nix-build $NIXAPPS -o $NIXAPPS/derivation && ln -sfn $NIXAPPS/derivation/bin/* $NIXAPPS
+nix-build $NIXAPPS -o $NIXAPPS/derivation
 
 # Make symlinks in ~/nixapps to the symlinks in ~/nixapps/derivation/bin
 ln -sfn $NIXAPPS/derivation/bin/* $NIXAPPS
