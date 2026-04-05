@@ -151,14 +151,14 @@ alias winhome='cd $WINHOME_DIR' # quick access to windows home directory
 alias setupremote='bash ~/projects/setup_remote.sh'      # quick access to remote setup script
 alias pushandupdate='bash ~/projects/push_and_update.sh' # quick access to push and update script
 
-alias latest='git pull winrepo $(git branch --show-current)'
+alias latest='git pull origin $(git branch --show-current)'
 
 alias commit='git commit -m "$@"'                           # quoted message for argument
-alias push='git push winrepo $(git branch --show-current)'   # push
+alias push='git push origin $(git branch --show-current)'   # push
 
 alias amend='git commit --amend --no-edit'  # keeps existing message
 alias change='git commit --amend'           # asks for message
-alias fpush='git push --force winrepo $(git branch --show-current)' # force push (required after amend)
+alias fpush='git push --force origin $(git branch --show-current)' # force push (required after amend)
 
 
 ## Startup reports
